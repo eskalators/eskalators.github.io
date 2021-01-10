@@ -22,6 +22,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
         crossorigin="anonymous"></script>
+
+    <!-- Mapbox API-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+
 </head>
 
 <body>
@@ -116,10 +121,7 @@
             </nav>
 
             <h2>Ārvalstu ienākoša migrācija, vecuma grupa 15-24 gadi</h2>
-            <iframe
-                src='https://api.mapbox.com/styles/v1/yurish/ckjqvf8lm5oj619t4rwh38zxb.html?fresh=true&title=view&access_token=pk.eyJ1IjoieXVyaXNoIiwiYSI6ImQyZ0htazAifQ.O5YhtjegJMiTwqSJo8ZhRA'
-                width='100%' height='800px'>
-            </iframe>
+            <div width='100%' height='800px' id="map"></div>
         </div>
     </div>
 
@@ -141,6 +143,13 @@
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
+        });
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11mapbox://styles/yurish/ckjqvf8lm5oj619t4rwh38zxb',
+            center: [57, 24],
+            zoom: 9
         });
     </script>
 </body>
