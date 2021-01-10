@@ -6,16 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Latvija kā eskalators: internacionalizācija, jauniešu sniegums darba tirgū, reģionālā un cilvēku kapitāla nelīdzsvarotība Latvijā</title>
+    <title>Latvija kā eskalators: internacionalizācija, jauniešu sniegums darba tirgū, reģionālā un cilvēku kapitāla
+        nelīdzsvarotība Latvijā</title>
 
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="../../../style.css">
 
     <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+    <!-- Mapbox API-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        .legend {
+            background-color: #fff;
+            border-radius: 3px;
+            bottom: 50px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            padding: 10px;
+            position: absolute;
+            right: 40px;
+            z-index: 1;
+        }
+
+        .legend h4 {
+            margin: 0 0 10px;
+        }
+
+        .legend div span {
+            border-radius: 50%;
+            display: inline-block;
+            height: 10px;
+            margin-right: 5px;
+            width: 10px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -27,8 +64,9 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li>
-                    <a href="#ilgtermina" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ilgtermiņa migrācija</a>
+                <li class="active"> 
+                    <a href="#ilgtermina" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Ilgtermiņa migrācija</a>
                     <ul class="collapse list-unstyled" id="ilgtermina">
                         <li>
                             <a href="/pages/ilgtermina/15-24/in.html">Vecuma grupa 15-24 gadi</a>
@@ -41,8 +79,9 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#arvalstu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ārvalstu migrācija</a>
+                <li >
+                    <a href="#arvalstu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ārvalstu
+                        migrācija</a>
                     <ul class="collapse list-unstyled" id="arvalstu">
                         <li>
                             <a href="/pages/arvalstu/15-24/in.html">Vecuma grupa 15-24 gadi</a>
@@ -55,8 +94,9 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#iekszemes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Iekšzemes migrācija</a>
+                <li >
+                    <a href="#iekszemes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Iekšzemes
+                        migrācija</a>
                     <ul class="collapse list-unstyled" id="iekszemes">
                         <li>
                             <a href="/pages/iekszemes/15-24/in.html">Vecuma grupa 15-24 gadi</a>
@@ -72,7 +112,7 @@
                 <li>
                     <a href="https://eskalators.lu.lv/" target="_blank">Par projektu</a>
                 </li>
-                
+
             </ul>
 
             <ul class="list-unstyled CTAs">
@@ -92,57 +132,147 @@
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Page</a>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="in.html">Ienākoša plūsma</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
+                                <a class="nav-link" href="out.html">Izejoša plūsma</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
+                                <a class="nav-link" href="saldo.html">Saldo</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
 
-            <h2>Ilgtermiņa ienākoša migrācija</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h2>Ilgtermiņa migrācija, vecuma grupa 25-34 gadi</h2>
+            <div style="height:800px;" id="map"></div>
+            <div id="state-legend" class="legend">
+                <h4>Migrācija</h4>
+                <div><span style="background-color: #0000FF"></span>100</div>
+                <div><span style="background-color: #3a3aff"></span>75</div>
+                <div><span style="background-color: #7b7bff"></span>50</div>
+                <div><span style="background-color: #b9b9ff"></span>25</div>
+                <div><span style="background-color: #FFFFFF"></span>0</div>
+            </div>
         </div>
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
 
     <script type="text/javascript">
+
+        var config = {
+            "layerName": "ilgtermina_25-34-1a5g5h",
+            "sourceURL": "mapbox://yurish.b3jwjmhx",
+            "showProperty": "ilg_in_25_",
+            "props":{
+                "in":'ilg_in_25_',
+                "out":'ilg_out_25',
+                "saldo":'ilg_sald_1'
+            }
+        }
+
+
+
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
         });
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoieXVyaXNoIiwiYSI6ImQyZ0htazAifQ.O5YhtjegJMiTwqSJo8ZhRA';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [24.4, 56.9],
+            zoom: 7
+        });
+
+        map.on('load', function () {
+
+            map.addSource('migration', {
+                type: 'vector',
+                url: config.sourceURL
+            });
+
+            map.addLayer({
+                'id': 'migrationLayer',
+                'source': 'migration',
+                'source-layer': config.layerName,
+                'type': 'fill',
+                'paint': {
+                    'fill-color': [
+                        'interpolate',
+                        ['linear'],
+                        ['get', config.showProperty],
+                        0,
+                        '#FFFFFF',
+                        25,
+                        '#b9b9ff',
+                        50,
+                        '#7b7bff',
+                        75,
+                        '#3a3aff',
+                        100,
+                        '#0000FF'
+                    ],
+                    'fill-outline-color': '#7b7bff'
+                }
+            })
+
+
+
+            map.addSource('centroids', {
+                type: 'vector',
+                url: 'mapbox://yurish.ahun77yp'
+            });
+            map.addLayer({
+                'id': 'district-names',
+                'type': 'symbol',
+                'source': 'centroids',
+                'source-layer': 'centroids-1klnha',
+                'layout': {
+                    'icon-image': 'custom-marker',
+                    // get the title name from the source's "title" property
+                    'text-field': ['get', 'Nosaukums'],
+                    'text-font': [
+                        'Open Sans Semibold',
+                        'Arial Unicode MS Bold'
+                    ],
+                    'text-offset': [0, 1.25],
+                    'text-anchor': 'top'
+                }
+            });
+        });
+        map.on('click', 'migrationLayer', function (e) {
+            console.log(e);
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var props = e.features[0].properties;
+            var description = '<h4>' + props.Nos_pilns + '</h4><ul><li>Ienākošā migrācija: <b>' + props[config.props.in]+ '</b></li><li>Izejošā migrācija: <b>' + props[config.props.out] + '</b></li><li>Saldo: <b>' + props[config.props.saldo] + '</b></li></ul>';
+
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(description)
+                .addTo(map);
+        });
+
     </script>
 </body>
 
