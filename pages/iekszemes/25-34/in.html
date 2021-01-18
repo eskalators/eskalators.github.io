@@ -261,7 +261,7 @@
             console.log(e);
             var coordinates = e.features[0].geometry.coordinates.slice();
             var props = e.features[0].properties;
-            var description = '<h4>' + props.Nos_pilns + '</h4><ul><li>Ienākošā migrācija: <b>' + props[config.props.in]+ '</b></li><li>Izejošā migrācija: <b>' + props[config.props.out] + '</b></li><li>Saldo: <b>' + props[config.props.saldo] + '</b></li></ul>';
+            var description = '<h4>' + props.Nos_pilns + '</h4><ul><li>Ienākošā migrācija: <b>' + Math.round(props[config.props.in])+ '</b></li><li>Izejošā migrācija: <b>' + Math.round(props[config.props.out]) + '</b></li><li>Saldo: <b>' + Math.round(props[config.props.saldo]) + '</b></li></ul>';
 
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
