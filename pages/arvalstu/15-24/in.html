@@ -149,13 +149,14 @@
             <h2>Ārvalstu migrācija, vecuma grupa 15-24 gadi</h2>
             <div style="height:800px;" id="map"></div>
             <div id="state-legend" class="legend">
-                <h4>Migrācija</h4>
+                <h6>Migrantu skaits</h6>
                 <div><span style="background-color: #0000FF"></span>100</div>
                 <div><span style="background-color: #3a3aff"></span>75</div>
                 <div><span style="background-color: #7b7bff"></span>50</div>
                 <div><span style="background-color: #b9b9ff"></span>25</div>
                 <div><span style="background-color: #FFFFFF"></span>0</div>
             </div>
+            
         </div>
     </div>
 
@@ -261,7 +262,7 @@
             console.log(e);
             var coordinates = e.features[0].geometry.coordinates.slice();
             var props = e.features[0].properties;
-            var description = '<h4>' + props.Nos_pilns + '</h4><ul><li>Ienākošā migrācija: <b>' + props[config.props.in]+ '</b></li><li>Izejošā migrācija: <b>' + props[config.props.out] + '</b></li><li>Saldo: <b>' + props[config.props.saldo] + '</b></li></ul>';
+            var description = '<h4>' + props.Nos_pilns + '</h4><ul><li>Ienākošā migrācija: <b>' + props[config.props.in]+ '</b></li><li>Izejošā migrācija: <b>' + props[config.props.out] + '</b></li><li>Saldo: <b>' + props[config.props.saldo] + '</b></li></ul><p>Mērvienība: migrantu skaits</p>';
 
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
